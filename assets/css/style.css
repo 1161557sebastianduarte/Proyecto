@@ -1,0 +1,10 @@
+body#index,
+body#entrar {
+  background-image: url("/assets/img/bg1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.user-panel img {
+  width: 3.3rem;
+}
