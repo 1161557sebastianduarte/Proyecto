@@ -8,3 +8,7 @@ body#entrar {
 .user-panel img {
   width: 3.3rem;
 }
+
+[class*="col-"] {
+      margin-bottom: 15px;
+}
