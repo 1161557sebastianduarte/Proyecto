@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition layout-top-nav">
 <div class="wrapper">
 
   <nav class="main-header navbar navbar-expand navbar-dark navbar-danger">
@@ -20,6 +20,16 @@
   <ul class="navbar-nav">
     <li class="nav-item">
       <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+    </li>
+    <li class="nav-item">
+      <a href="formularios-estudiantes.html" class="nav-link">
+        Estudiantes
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="formularios-docentes.html" class="nav-link active">
+        Docentes
+      </a>
     </li>
 	<!--
     <li class="nav-item d-none d-sm-inline-block">
@@ -35,85 +45,17 @@
   </ul>
 </nav>
 
-  <aside class="main-sidebar sidebar-dark-danger elevation-4">
-  <a href="#" class="brand-link bg-danger">
-    <span class="brand-text font-weight-bold">Ingeniería Electrónica</span>
-  </a>
-
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <!-- Sidebar user panel (optional) -->
-    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-      <div class="image">
-        <img src="assets/img/codigos/originales/0000001.jpg" class="img-circle" alt="José Daniel Durán">
-      </div>
-      <div class="info">
-        <a href="#" class="d-block">Fulanito Perez <br><small>Estudiante</small></a>
-      </div>
-    </div>
-
-    <!-- Sidebar Menu -->
-    <nav class="mt-2">
-      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-        <li class="nav-item has-treeview">
-          <a href="index.html" class="nav-link">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
-            <p>
-              Pruebas
-              <i class="right fas fa-angle-right"></i>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Formularios</p>
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="nav-item has-treeview menu-open">
-          <a href="index.html" class="nav-link active">
-            <i class="nav-icon fas fa-book"></i>
-            <p>
-              Formularios
-              <i class="right fas fa-angle-right"></i>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="formularios-estudiantes.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Estudiantes</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="formularios-docentes.html" class="nav-link active">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Docentes</p>
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-    <!-- /.sidebar-menu -->
-  </div>
-  <!-- /.sidebar -->
-</aside>
-
   <div class="content-wrapper">
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Formularios docentes</h1>
+            <h1 class="m-0 text-dark">Formularios profesores</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="/admin/">Inicio</a></li>
-              <li class="breadcrumb-item active">Formularios docentes</li>
+              <li class="breadcrumb-item active">Formularios profesores</li>
             </ol>
           </div>
         </div>
@@ -123,36 +65,84 @@
     <div class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-6">
-              <p>En esta página encontrará todos los formularios a los que como docente puede acceder.</p>
-              <ul>
-                  <li><a href="proyecto/Estudiante/Formato G ok.docx">Formato G ok</a></li>
-              </ul>
-          </div>
-          <div class="col-lg-6">
+          <div class="col-lg-12">
+              <p>En esta página encontrará todos los formularios a los que como estudiante puede acceder.</p>
+              <hr>
+              <div class="row">
+                  <div class="col">
+                      <div class="form-group">
+                          <input type="text" class="form-control form-control-lg" placeholder="Buscar formulario" id="buscar">
+                      </div>
+                  </div>
+              </div>
+              <hr>
+              <div class="row" id="formularios">
+                  <div class="col-4">
+                      <a href="proyecto/Profesores/Formato G ok.docx">
+                          <h6>Formato G ok.docx</h6>
+                          <img data-keyboard="true" data-toggle="modal" data-target="#modal-documentos" class="img-fluid" src="assets/img/proyecto/profesores/Formato G ok.png" alt="Formato G ok.docx" />
+                      </a>
+                  </div>
+              </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <aside class="control-sidebar control-sidebar-dark">
-    <div class="p-3">
-      <h3>Ayuda</h3>
-      <p>En ésta página encontrará información de depuración (prueba) de los módulos RFID.</p>
-    </div>
-  </aside>
-
   <footer class="main-footer">
-  <div class="float-right d-none d-sm-inline">
-    Copyright &copy; 2021 </div>
-  Diseñado y programado por <a href="https://josedanield10.com">José Daniel Durán</a> con plantilla <a href="https://adminlte.io">AdminLTE</a>.</strong>
+      <div class="float-right d-none d-sm-inline">
+          Copyright &copy; 2021
+      </div>
+
+      Diseñado y programado por <a href="https://josedanield10.com">José Daniel Durán</a> con plantilla <a href="https://adminlte.io">AdminLTE</a>.</strong>
 </footer>
 </div>
+
+    <div class="modal fade" id="modal-documentos" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Default Modal</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              <a class="btn btn-danger descargar" href="#">Descargar</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
 <script src="alte/plugins/jquery/jquery.min.js"></script>
 <script src="alte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="alte/dist/js/adminlte.min.js"></script>
+<script src="alte/dist/js/demo.js"></script>
+
+<script>
+
+$(document).ready(function(){
+  $("#buscar").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#formularios .col-4").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+  });
+});
+
+$(".col-4 img").click(function (obj){
+    obj.preventDefault();
+    var titulo = obj.target.alt;
+    $('#modal-documentos').find('.modal-title').text(titulo);
+    $('#modal-documentos').find('.descargar').attr("href", "proyecto/Profesores/" + titulo);
+    $('#modal-documentos').find('.modal-body').html('<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://docs.google.com/viewer?url=https://1161557sebastianduarte.github.io/Proyecto/proyecto/Profesores/' + titulo + '&embedded=true"></iframe></div>');
+});
+</script>
 
 </body>
 </html>
